@@ -1,8 +1,4 @@
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -323,7 +319,7 @@
 
             const btnAll = document.createElement("button");
             btnAll.className = "md:col-span-2 text-center bg-sky-50 border-2 border-sky-200 hover:border-sky-400 hover:bg-sky-100 p-4 rounded-xl shadow-sm transition duration-200 text-sky-700 font-bold text-lg mt-2";
-            btnAll.innerHTML = "🏆 綜合練習 <span class='text-sm font-normal text-sky-600 block mt-1'>打亂所有章節，隨機抽取 50 題</span>";
+            btnAll.innerHTML = "🏆 綜合練習 <span class='text-sm font-normal text-sky-600 block mt-1'>打亂所有章節，隨機抽取 30 題</span>";
             btnAll.onclick = () => startFullQuiz("綜合練習");
             topicListDiv.appendChild(btnAll);
         }
@@ -338,7 +334,7 @@
             if (topic === "綜合練習") {
                 questions = [...allQuestionsData];
                 shuffleArray(questions);
-                questions = questions.slice(0, Math.min(50, questions.length));
+                questions = questions.slice(0, Math.min(30, questions.length));
             } else {
                 questions = allQuestionsData.filter(q => q.top === topic);
             }
